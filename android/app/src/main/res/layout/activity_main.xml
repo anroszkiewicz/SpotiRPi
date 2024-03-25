@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionGroup="true"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="playClick"
+        android:text="\u23EF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volMinusButton" />
+
+    <Button
+        android:id="@+id/listenButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:onClick="listenClick"
+        android:text="EN"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/volMinusButton"
+        app:layout_constraintEnd_toStartOf="@+id/listenButtonPl"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAppName" />
+
+    <Button
+        android:id="@+id/listenButtonPl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="listenClickPl"
+        android:text="PL"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/listenButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/listenButton"
+        app:layout_constraintTop_toTopOf="@+id/listenButton" />
+
+    <Button
+        android:id="@+id/volMinusButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="minusClick"
+        android:text="-"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/volPlusButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listenButton" />
+
+    <Button
+        android:id="@+id/volPlusButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="plusClick"
+        android:text="+"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/volMinusButton"
+        app:layout_constraintTop_toBottomOf="@+id/listenButton" />
+
+    <TextView
+        android:id="@+id/textAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="$potiRPi"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/listenButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="connecting..."
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
